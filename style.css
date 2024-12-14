@@ -1,0 +1,58 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(133 5 5 / 52%);
+}
+main{
+    width: 40%;
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+    padding:1%;
+    background-color:rgb(109 87 87);
+}
+#screen{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    height:75px;
+    text-align:right;
+    background-color: rgba(128,128,128,0.4);
+    color:white;
+    margin:1%;
+}
+#screen span{
+    font-size: 1em;
+}
+#screen p{
+    font-size: 2em;
+    margin:0;
+}
+button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    width:23%;
+    line-height:65px;
+    border:0px;
+    border-radius:5%;
+    margin:1%
+}
+.operator{
+    font-weight: 700;
+}
+.operator,#equalTo{
+    background-color: rgb(133 5 5 / 52%);
+}
+
+button[value="0"]{
+    flex-grow: 2;
+}
+#clear,#minus,#percent{background-color:rgba(130, 148, 51, 0.616); color:white; font-weight: 700;}
+.digit,#point{background-color:white;}
+#minus{
+    font-size:1em;
+}
