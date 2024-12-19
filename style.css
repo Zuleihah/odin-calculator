@@ -5,40 +5,59 @@
 }
 body{
     background-color: rgb(133 5 5 / 52%);
+    display:flex; 
+   justify-content: space-around;
+   padding: 15px;
+   height: 100vh;
+   margin: 0;
+}
+
+header{
+    text-align:center;
+    margin-top:16px;
+}
+header h2{
+    font-size:4em;
+    margin:0;
+    font-weight: 400;
+}
+header p {
+    font-size:1.5em;
+    margin:0;
 }
 main{
     width: 40%;
     display:flex;
     flex-wrap: wrap;
-    margin:auto;
     padding:1%;
     background-color:rgb(109 87 87);
 }
 #screen{
     width:100%;
-    /* font-size: 2.5em; */
-    /* line-height:75px; */
     display:flex;
     flex-direction: column;
     justify-content: end;
-    height:75px;
+    height:14%;
     text-align:right;
     background-color: rgba(128,128,128,0.4);
     color:white;
     margin:1%;
+    gap:5px;
 }
 #screen span{
     font-size: 1em;
+    color: rgba(255, 255, 255, 0.7);
 }
 #screen p{
     font-size: 2em;
     margin:0;
+    height:50%;
 }
 button{
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
     width:23%;
-    line-height:65px;
+    height:12.5%;
     border:0px;
     border-radius:5%;
     margin:1%
@@ -48,17 +67,23 @@ button{
 }
 .operator,#equalTo{
     background-color: rgb(133 5 5 / 52%);
+    color:#f5b9b9;
+    font-weight: bold;
 }
 
 button[value="0"]{
     flex-grow: 2;
 }
-#clear,#minus,#percent{background-color:rgba(130, 148, 51, 0.616); color:white; font-weight: 700;}
-.digit,#point{background-color:white;}
+#clear,#minus,#percent{
+    background-color:rgba(130, 148, 51, 0.616); 
+    color:white; font-weight: 700;
+}
+.digit,#point{
+    background-color:white;
+}
 #minus{
     font-size:1em;
 }
-
 .section{
     color:white;
     width:100%;
@@ -66,4 +91,46 @@ button[value="0"]{
     display:flex;
     justify-content: space-between;
     font-size:1.5em;
+}
+
+
+@media screen and (max-width:800px){
+    header h2{
+        font-size:3em;
+    }
+    main{
+        width:53%;
+    }
+    #screen span{
+        font-size: 1em;
+    }
+    #screen p{
+        font-size: 1.5em;
+    }
+    
+
+}
+@media screen and (max-width:500px){
+    body{
+        flex-direction: column;
+        align-content: space-between;
+    }
+    header h2{
+        font-size:2em;
+    }
+    header p {
+        font-size:0.9em
+    }
+    main{
+        width:100%;
+        height:85%;
+    }
+
+    .section {
+        height: 8%;
+    }
+
+    button {
+        height: 12%;
+    }
 }
